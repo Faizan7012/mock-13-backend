@@ -5,7 +5,7 @@ const JR = express.Router();
 JR.post('/create', authMiddle ,  createJob )
 JR.get('/', getJob )
 JR.delete('/delete/:id',authMiddle , deleteJob )
-JR.put('/update/:id',authMiddle , updateJob )
+JR.put('/update/:id', updateJob )
 
 
 module.exports = JR
