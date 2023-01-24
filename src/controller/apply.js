@@ -1,7 +1,7 @@
 const AppJ = require("../model/apply")
 
 const applyJob = async(req , res)=>{
-    const { id } = req.body
+    const { id } = req.body;
      try{
         let apply = await AppJ.create({JobID :req.params.id, userID :id});
         res.send({
@@ -19,7 +19,7 @@ const applyJob = async(req , res)=>{
 
 
 const getAppJob = async(req , res)=>{
-    const { id } = req.body
+    const { id } = req.params;
      try{
         let apply = await AppJ.find({userID : id}).populate('JobID')
         res.send({
